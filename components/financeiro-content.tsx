@@ -98,7 +98,7 @@ const dadosCategorias = [
 
 export function FinanceiroContent() {
   const [searchTerm, setSearchTerm] = useState("")
-  const [tipoFilter, setTipoFilter] = useState("todos")
+  const [tipoFilter] = useState("todos")
   const [statusFilter, setStatusFilter] = useState("todos")
   const [isNewTransacaoOpen, setIsNewTransacaoOpen] = useState(false)
 
@@ -355,7 +355,7 @@ export function FinanceiroContent() {
                     cx="50%"
                     cy="50%"
                     labelLine={false}
-                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                    label={({ name, percent }: any) => `${name} ${(percent * 100).toFixed(0)}%`}
                     outerRadius={80}
                     fill="#8884d8"
                     dataKey="value"
